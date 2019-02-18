@@ -1,0 +1,23 @@
+<div class="btn-container">
+    <%= link_to "Go back", ask_path, class: "link" %>
+</div>
+
+<div class="display">
+    <h2 class="title">
+        Your Question
+    </h2>
+
+    <h3 class="subtitle">
+        <%= @question %>
+    </h3>
+
+    <hr class="hr">
+
+    <h2 class="title">
+        Coach Answer
+    </h2>
+
+    <h3 class="subtitle">
+        <%= @answer %>
+    </h3>
+</div>

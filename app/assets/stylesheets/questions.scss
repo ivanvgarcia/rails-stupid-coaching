@@ -1,0 +1,89 @@
+// Place all the styles related to the questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+$main: rgb(168, 6, 6);
+$white: rgb(253, 247, 247);
+$black: rgb(49, 46, 46);
+$grey: rgb(202, 199, 199);
+.wrapper {
+    background: $main;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: $white;
+    margin: 0;
+    font-weight: 100;
+}
+
+.subtitle {
+    color: $grey;
+    font-weight: 100;
+}
+
+.form {
+    display: flex;
+    &__text {
+        flex: 1;
+        height: 30px;
+    }
+    &__submit {
+        font-size: 26px;
+        color: $white;
+        border: none;
+        background: $black;
+        cursor: pointer;
+        transition: background .2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    }
+    &__submit:hover {
+        background: rgba($black, .8);
+    }
+}
+
+.link {
+    background: $grey;
+    color: $main;
+    padding: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .3s cubic-bezier(0.86, 0, 0.07, 1);
+    margin-top: 30px;
+    display: block;
+}
+
+.link:hover {
+    background: rgba($grey, .7);
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.display {
+    opacity: 0;
+    transform: translateY(-200px);
+    animation: dropin .4s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    margin-top: 40px;
+}
+
+@keyframes dropin {
+    0% {
+        transform: translateY(-200px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hr {
+    border: 1px solid $grey;
+}
